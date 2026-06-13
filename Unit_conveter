@@ -1,0 +1,95 @@
+# ==============================
+# Python Unit Converter Project
+# ==============================
+
+def meter_to_kilometer(value):
+    return value / 1000
+
+def kilometer_to_meter(value):
+    return value * 1000
+
+def centimeter_to_meter(value):
+    return value / 100
+
+def meter_to_centimeter(value):
+    return value * 100
+
+def gram_to_kilogram(value):
+    return value / 1000
+
+def kilogram_to_gram(value):
+    return value * 1000
+
+def celsius_to_fahrenheit(value):
+    return (value * 9 / 5) + 32
+
+def fahrenheit_to_celsius(value):
+    return (value - 32) * 5 / 9
+
+def minutes_to_seconds(value):
+    return value * 60
+
+def seconds_to_minutes(value):
+    return value / 60
+
+
+while True:
+    print("\n===================================")
+    print("      PYTHON UNIT CONVERTER")
+    print("===================================")
+    print("1. Meter → Kilometer")
+    print("2. Kilometer → Meter")
+    print("3. Centimeter → Meter")
+    print("4. Meter → Centimeter")
+    print("5. Gram → Kilogram")
+    print("6. Kilogram → Gram")
+    print("7. Celsius → Fahrenheit")
+    print("8. Fahrenheit → Celsius")
+    print("9. Minutes → Seconds")
+    print("10. Seconds → Minutes")
+    print("11. Exit")
+
+    choice = input("\nEnter your choice (1-11): ")
+
+    if choice == "11":
+        print("Thank you for using the Unit Converter!")
+        break
+
+    try:
+        value = float(input("Enter the value to convert: "))
+
+        if choice == "1":
+            print("Result:", meter_to_kilometer(value), "Kilometers")
+
+        elif choice == "2":
+            print("Result:", kilometer_to_meter(value), "Meters")
+
+        elif choice == "3":
+            print("Result:", centimeter_to_meter(value), "Meters")
+
+        elif choice == "4":
+            print("Result:", meter_to_centimeter(value), "Centimeters")
+
+        elif choice == "5":
+            print("Result:", gram_to_kilogram(value), "Kilograms")
+
+        elif choice == "6":
+            print("Result:", kilogram_to_gram(value), "Grams")
+
+        elif choice == "7":
+            print("Result:", celsius_to_fahrenheit(value), "°F")
+
+        elif choice == "8":
+            print("Result:", fahrenheit_to_celsius(value), "°C")
+
+        elif choice == "9":
+            print("Result:", minutes_to_seconds(value), "Seconds")
+
+        elif choice == "10":
+            print("Result:", seconds_to_minutes(value), "Minutes")
+
+        else:
+            print("Invalid choice! Please select a number between 1 and 11.")
+
+    except ValueError:
+        print("Invalid input! Please enter a numeric value.")
